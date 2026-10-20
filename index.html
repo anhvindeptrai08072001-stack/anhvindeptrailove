@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday My Love ❤️</title>
+<title>Chúc Mừng 20/10 💖</title>
 
 <style>
 * {
@@ -14,90 +13,74 @@
 }
 
 body {
-    font-family: "Segoe UI", sans-serif;
     min-height: 100vh;
-    overflow-x: hidden;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffc3a0);
     text-align: center;
-    background: linear-gradient(-45deg,
-        #ff758c, #ff7eb3, #a18cd1, #fbc2eb);
-    background-size: 400% 400%;
-    animation: bg 10s ease infinite;
+    padding: 20px;
 }
 
-@keyframes bg {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
-.container {
-    max-width: 750px;
-    margin: 35px auto;
-    padding: 30px 22px;
-    width: 92%;
-    background: rgba(255,255,255,0.17);
-    border: 2px solid rgba(255,255,255,0.5);
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    padding: 35px 24px;
     border-radius: 30px;
-    box-shadow: 0 0 35px rgba(255,255,255,0.35);
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 15px 50px rgba(180, 20, 90, 0.3);
+    z-index: 2;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.flower {
+    font-size: 65px;
+    animation: swing 2s infinite ease-in-out;
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
 }
 
 h1 {
-    font-size: clamp(30px, 7vw, 55px);
-    color: #fff;
-    text-shadow: 0 0 15px #ff006e;
-    animation: glow 2s infinite alternate;
+    color: #ff2878;
+    font-size: 30px;
+    margin: 15px 0;
+    text-shadow: 2px 2px 8px #ffc0d7;
 }
 
-@keyframes glow {
-    from {text-shadow: 0 0 10px #ff006e;}
-    to {text-shadow: 0 0 30px #fff, 0 0 45px #ff006e;}
-}
-
-.cake {
-    font-size: 100px;
-    margin: 20px;
-    animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {transform: translateY(0);}
-    50% {transform: translateY(-15px);}
-}
-
-.subtitle {
-    font-size: 22px;
-    margin: 18px 0;
-    font-weight: bold;
-}
-
-.message {
-    font-size: 17px;
-    line-height: 1.9;
-    margin: 25px 0;
-    padding: 22px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.16);
-}
-
-.highlight {
-    color: #fff5a5;
-    font-weight: bold;
+h2 {
+    color: #ff5790;
     font-size: 21px;
+    margin-bottom: 18px;
+}
+
+p {
+    color: #8c3657;
+    line-height: 1.8;
+    font-size: 16px;
 }
 
 button {
+    margin-top: 25px;
+    padding: 16px 25px;
     border: none;
-    padding: 15px 28px;
-    margin: 10px;
-    border-radius: 30px;
-    background: linear-gradient(45deg, #ff1744, #ff80ab);
+    border-radius: 50px;
     color: white;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 5px 20px #ff174477;
+    background: linear-gradient(45deg, #ff2678, #ff75a5);
+    box-shadow: 0 7px 20px #ff9aba;
     transition: 0.3s;
 }
 
@@ -105,149 +88,100 @@ button:hover {
     transform: scale(1.08);
 }
 
-#surprise {
+#gift {
     display: none;
     margin-top: 25px;
-    font-size: 21px;
-    line-height: 1.8;
-    color: #fff9c4;
-    animation: appear 1s ease;
+    padding: 20px 10px;
+    border-radius: 20px;
+    background: #fff0f6;
+    animation: appear 0.6s ease;
 }
 
-@keyframes appear {
-    from {opacity: 0; transform: scale(0.7);}
-    to {opacity: 1; transform: scale(1);}
+.money {
+    font-size: 42px;
+    font-weight: bold;
+    color: #ff2678;
+    margin: 12px 0;
 }
 
 .heart {
     position: fixed;
-    bottom: -40px;
-    animation: fly 7s linear infinite;
+    bottom: -30px;
+    font-size: 24px;
+    animation: floatUp 6s linear infinite;
     pointer-events: none;
-    z-index: 5;
 }
 
-@keyframes fly {
-    0% {transform: translateY(0) rotate(0deg); opacity: 0;}
-    10% {opacity: 1;}
-    100% {transform: translateY(-115vh) rotate(360deg); opacity: 0;}
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0); opacity: 1; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
 }
 
 .footer {
-    margin-top: 25px;
-    font-size: 17px;
-    color: white;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #cc6286;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>🎉 Happy Birthday 🎉</h1>
+<div class="card">
+    <div class="flower">🌹💐🌹</div>
 
-    <div class="cake">🎂</div>
+    <h1>Chúc Mừng 20/10</h1>
+    <h2>Gửi người con gái anh yêu 💗</h2>
 
-    <div class="subtitle">
-        💖 Chúc Mừng Sinh Nhật Em Yêu 💖
-    </div>
-
-    <p style="font-size:19px;">
-        Hôm nay là ngày đặc biệt nhất,<br>
-        vì thế giới đã sinh ra một người đặc biệt với anh! 🌎❤️
+    <p>
+        Chúc em yêu của anh luôn xinh đẹp,<br>
+        vui vẻ, hạnh phúc và luôn rạng rỡ nhé! 🌷<br>
+        <b>Mong rằng mỗi ngày bên anh đều là một ngày đặc biệt.</b><br>
+        Anh yêu em nhiều lắm! 💕
     </p>
 
-    <div class="message">
-        Gửi em bé đáng yêu nhất của anh! 💌<br><br>
-
-        Chúc mừng sinh nhật tình yêu của anh! 🥰<br>
-
-        Anh chúc em tuổi mới luôn xinh đẹp, vui vẻ,
-        hạnh phúc và lúc nào cũng nở nụ cười thật tươi nhé. 🌷<br><br>
-
-        Mong rằng mọi điều tốt đẹp nhất trên thế giới này
-        sẽ đến với em. Những điều em mong ước đều sẽ thành hiện thực,
-        những ngày buồn sẽ ít đi và những ngày hạnh phúc
-        sẽ nhiều hơn thật nhiều. ✨<br><br>
-
-        Cảm ơn em vì đã xuất hiện trong cuộc đời anh,
-        vì đã cho anh biết cảm giác yêu thương một người
-        nhiều đến thế nào. ❤️<br><br>
-
-        Anh không hứa sẽ khiến mọi ngày của em đều hoàn hảo,
-        nhưng anh hứa sẽ cố gắng trở thành người luôn ở bên em,
-        cùng em vượt qua những ngày khó khăn và chia sẻ
-        với em tất cả niềm vui trong cuộc sống. 🫶<br><br>
-
-        <span class="highlight">
-            Chúc em sinh nhật vui vẻ!<br>
-            Anh yêu em nhiều hơn những gì anh có thể nói! 💗
-        </span>
-    </div>
-
-    <button onclick="showLove()">
-        💝 Nhấn vào đây nha bé 💝
+    <button id="receive" onclick="nhanTien()">
+        💸 BẤM NHẬN TIỀN 💸
     </button>
 
-    <div id="surprise">
-        🎁 Bất ngờ dành riêng cho em 🎁<br><br>
-
-        Nếu được chọn lại một lần nữa,<br>
-        anh vẫn sẽ chọn gặp em,<br>
-        chọn yêu em và chọn nắm tay em<br>
-        đi qua thật nhiều mùa sinh nhật nữa. 💕<br><br>
-
-        Em không cần phải là người hoàn hảo nhất,<br>
-        vì trong mắt anh, em luôn là người đặc biệt nhất! 🌹<br><br>
-
-        <span style="font-size:32px;">
-            ANH YÊU EM ❤️😘💋
-        </span>
+    <div id="gift">
+        <div style="font-size:45px">🎁💖💵</div>
+        <h2>Chúc mừng em yêu!</h2>
+        <p>Em đã mở khóa thành công món quà 20/10!</p>
+        <div class="money">100.000đ</div>
+        <p>
+            Đây là lì xì yêu thương của anh dành cho em 🥰<br>
+            Chúc em luôn vui vẻ và yêu anh thật nhiều nhé! 💋
+        </p>
+        <div style="font-size:30px;margin-top:12px">
+            💐❤️😘❤️💐
+        </div>
     </div>
 
     <div class="footer">
-        Made with ❤️ just for you<br>
-        💌 From your boyfriend with all his love 💌
+        Mãi yêu em • Happy Vietnamese Women's Day 💕
     </div>
 </div>
 
 <script>
-function showLove() {
-    document.getElementById("surprise").style.display = "block";
+function nhanTien() {
+    document.getElementById("gift").style.display = "block";
+    document.getElementById("receive").style.display = "none";
 
-    for (let i = 0; i < 45; i++) {
-        setTimeout(() => {
-            const heart = document.createElement("div");
-            heart.className = "heart";
+    for (let i = 0; i < 35; i++) {
+        const heart = document.createElement("div");
+        heart.innerHTML = ["💖", "💕", "🌹", "💸", "💗"][
+            Math.floor(Math.random() * 5)
+        ];
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+        heart.style.fontSize = (20 + Math.random() * 25) + "px";
+        document.body.appendChild(heart);
 
-            const symbols = ["❤️", "💖", "💕", "💗", "💘", "🌹", "✨"];
-            heart.innerHTML =
-                symbols[Math.floor(Math.random() * symbols.length)];
-
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.fontSize = (20 + Math.random() * 25) + "px";
-            heart.style.animationDuration = (3 + Math.random() * 4) + "s";
-
-            document.body.appendChild(heart);
-
-            setTimeout(() => heart.remove(), 8000);
-        }, i * 70);
+        setTimeout(() => heart.remove(), 7000);
     }
 }
-
-setInterval(() => {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = ["❤️", "💕", "💗", "✨"][
-        Math.floor(Math.random() * 4)
-    ];
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (18 + Math.random() * 20) + "px";
-    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
-
-    document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 10000);
-}, 500);
 </script>
 
 </body>
